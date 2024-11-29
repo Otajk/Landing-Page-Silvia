@@ -1,0 +1,124 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Banner com efeito */
+  .banner {
+    position: relative;
+    height: 60vh;
+    background: url('https://i.wpimg.pl/1280x720/filerepo.grupawp.pl/api/v1/display/embed/857799a8-2344-48bd-b75b-d63ae0a2fecb') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+ 
+
+  
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Seção do formulário */
+  .form-section {
+    padding: 2rem;
+    background: #2e2e2e;
+    text-align: center;
+  }
+  
+  .form-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .promo-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  
+  .promo-form label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .promo-form input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid   #ffd900;
+    border-radius: 5px;
+  }
+  
+  
+  .promo-form button {
+    padding: 0.7rem;
+    border: none;
+    background: linear-gradient(to right, #ffda0a, #ffe97f);
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .promo-form button:hover {
+    background: linear-gradient(to right, #ffda0ad8, #ffea7fc7);;
+  }
+  
+  /* Responsividade */
+  /* A partir de telas menores (tablets e celulares) */
+  @media (max-width: 768px) {
+    /* Torna o banner menor para telas pequenas */
+    .banner {
+      height: 40vh;
+    }
+  
+    .banner-content h1 {
+      font-size: 1.5rem;
+    }
+  
+    .banner-content p {
+      font-size: 1rem;
+    }
+  
+    /* Ajusta o formulário */
+    .promo-form {
+      width: 90%;
+    }
+  
+    .promo-form button {
+      font-size: 0.9rem;
+    }
+  }
+  
